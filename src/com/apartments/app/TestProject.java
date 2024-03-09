@@ -64,4 +64,18 @@ class TestProject
 		s1.setWeeklyHours(35);
 		assertEquals(35, s1.getWeeklyHours());
 	}
+	
+	@Test
+	void testAnnualIncome() {
+		Tenant t1 = new Tenant("John", "Fresca", 738789023);
+		t1.setAnnualIncome(78500);
+		assertEquals(78500, t1.getAnnualIncome());
+	}
+	
+	@Test
+	void testCreditScore() {
+		Tenant t1 = new Tenant("John", "Fresca", 738789023);
+		t1.setCreditScore(689);
+		assertEquals(689, t1.getCreditScore());
+	}
 }
