@@ -43,4 +43,25 @@ class TestProject
 		assertEquals(unit1, buildingA.getApartment("A1"));
 		assertEquals(unit2, buildingA.getApartment("A2"));
 	}
+	
+	@Test
+	void testStaffJobTitle() {
+		Staff s1 = new Staff("Lisa", "Albridge", 783432837);
+		s1.setJobTitle("Manager");
+		assertEquals("Manager", s1.getJobTitle());
+	}
+	
+	@Test
+	void testHourlyWage() {
+		Staff s1 = new Staff("Lisa", "Albridge", 783432837);
+		s1.setHourlyWage(18.50);
+		assertEquals(18.50, s1.getHourlyWage());
+	}
+	
+	@Test
+	void testWeeklyHours() {
+		Staff s1 = new Staff("Lisa", "Albridge", 783432837);
+		s1.setWeeklyHours(35);
+		assertEquals(35, s1.getWeeklyHours());
+	}
 }
