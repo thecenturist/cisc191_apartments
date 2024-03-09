@@ -1,6 +1,9 @@
 package com.apartments.app;
 
 import static org.junit.jupiter.api.Assertions.*;
+
+import java.util.ArrayList;
+
 import org.junit.jupiter.api.Test;
 
 /**
@@ -87,5 +90,17 @@ class TestProject
 		assertEquals("Jamie", p1.getFirstName());
 		assertEquals("Jamie Finnicky", p1.getFullName());
 		assertEquals("J.F.", p1.getInitials());
+	}
+	
+	@Test
+	void testLease() {
+		Tenant t1 = new Tenant("John", "Doe", 0002232343);
+		Tenant t2 = new Tenant("Jane", "Coke", 000212345);
+		Tenant t3 = new Tenant("Jane", "Fonda", 000232345);
+		ArrayList<Person> coo = new ArrayList<Person>();
+		coo.add(t2);
+		Lease lease = new Lease(t1, coo);
+		assertEquals(t1, lease.getLeaseOwner());
+		assertEquals(coo, lease.getLeaseCoowners());
 	}
 }
