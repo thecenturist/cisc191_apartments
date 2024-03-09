@@ -1,9 +1,19 @@
 package com.apartments.app;
 
 import java.util.ArrayList;
-import java.util.Enumeration;
 import java.util.Hashtable;
 import java.util.List;
+
+/**
+ * Lead Author(s):
+ * @author Anjolaoluwa Akinremi
+ * 
+ * References:
+ * Version/date: March-9-2024
+ * 
+ * Responsibilities of class:
+ * Model a building object which will contain apartment units.
+ */
 
 public class Building {
     private static int unitCounter = 0; // A Building has-a unitCounter
