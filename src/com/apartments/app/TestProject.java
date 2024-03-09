@@ -78,4 +78,14 @@ class TestProject
 		t1.setCreditScore(689);
 		assertEquals(689, t1.getCreditScore());
 	}
+	
+	@Test
+	void testPerson() {
+		Person p1 = new Person("Jamie", "Finnicky", 983022304);
+		assertEquals(983022304, p1.getSSN());
+		assertEquals("Finnicky", p1.getLastName());
+		assertEquals("Jamie", p1.getFirstName());
+		assertEquals("Jamie Finnicky", p1.getFullName());
+		assertEquals("J.F.", p1.getInitials());
+	}
 }
