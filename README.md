@@ -1,1 +1,2 @@
-"# cisc191_apartments" 
+# Project Proposal
+Our new apartment complex launches in less than a year and we need an application to manage buildings, apartments, leases, tenants, and staff information. Initially we will only have apartments as living spaces but there are plans for more types in the future. We should be able to view all occupied apartment units and unoccupied apartments which will be used to list units for rent. We should be able to view apartments and their respective tenants.
