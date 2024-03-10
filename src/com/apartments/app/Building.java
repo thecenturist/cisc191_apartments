@@ -16,13 +16,15 @@ import java.util.List;
  */
 
 public class Building {
-    private static int unitCounter = 0; // A Building has-a unitCounter
+    private static int unitCounter = 0; // Building has-a unitCounter
+    private static ArrayList<Character> buildingCodes = new ArrayList<Character>(); // Building has buildingCodes
     private char code; // A Building has-a code
     private Hashtable<String, Apartment> spaces; // A Building has spaces
 
     Building(char code){
         this.code = code;
         this.spaces = new Hashtable<String, Apartment>();
+        this.buildingCodes.add(code);
     }
 
     Building(char code, ArrayList<Apartment> apartments){
@@ -33,6 +35,14 @@ public class Building {
             System.out.println("There was a problem adding apartments to building.");
         }
 
+    }
+    
+    /**
+     * Return the list of building codes that have been created
+     * @return ArrayList<Character>
+     */
+    public static ArrayList<Character> getBuildingCodes() {
+    	return Building.buildingCodes;
     }
 
     /**
