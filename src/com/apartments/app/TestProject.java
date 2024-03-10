@@ -103,4 +103,22 @@ class TestProject
 		assertEquals(t1, lease.getLeaseOwner());
 		assertEquals(coo, lease.getLeaseCoowners());
 	}
+	
+	@Test
+	void testApartment() {
+		Apartment unit1 = new Apartment(4, 2.5, 5990, 2600);
+		Apartment unit2 = new Apartment(1, 1, 1500, 2600);
+		Tenant t1 = new Tenant("John", "Doe", 0002232343);
+		assertEquals(4, unit1.getBed());
+		assertEquals(2.5, unit1.getBathroom());
+		assertEquals(false, unit2.isOccupied());
+		Lease lease = new Lease(t1, null);
+		unit2.setLease(lease);
+		assertEquals(true, unit2.isOccupied());
+		assertEquals(2600, unit1.getSquareFootage());
+		unit1.setSquareFootage(2601);
+		assertEquals(2601, unit1.getSquareFootage());
+		assertEquals(lease, unit2.getLease());
+		assertEquals(1500, unit2.getRent());
+	}
 }
