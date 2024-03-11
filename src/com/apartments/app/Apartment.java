@@ -11,7 +11,7 @@ package com.apartments.app;
  * Model an Apartment unit of a Building
  */
 
-public class Apartment {
+public class Apartment implements Rental {
     private double numberOfBedrooms; // An Apartment has-a numberOfBedrooms
     private double numberOfBathrooms; // An Apartment has-a numnberOfBathrooms
     private double rentAmount; // An Apartment has-a rentAmount
@@ -61,7 +61,7 @@ public class Apartment {
      * Return the Rent amount of the Apartment
      * @return double
      */
-    public double getRent() {
+    public double getRentAmount() {
     	return this.rentAmount;
     }
     
@@ -93,7 +93,8 @@ public class Apartment {
      * Set the rent amount of the Apartment
      * @param num
      */
-    public void setRent(int num) {
+    @Override
+    public void setRentAmount(double num) {
     	this.rentAmount = num;
     }
     
